@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="Demo">
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+
+  <script type="text/javascript" src="/app/app.js"></script>
+  <script type="text/javascript" src="/app/controllers/home.js"></script>
+  <script type="text/javascript" src="/app/services/restService.js"></script>
+  </head>
+  <body ng-controller="HomeController" ng-init="init()">
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+
+    
+    <ol>
+      <li ng-repeat="person in people"><% person.name + ", " + person.location + ", " + person.specialty %></li>
+    </ol>
+
+  </body>
+</html>
